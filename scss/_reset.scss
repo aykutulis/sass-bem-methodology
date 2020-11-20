@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 0.8rem;
+
+  @include responsive(small) {
+    font-size: 0.85rem;
+  }
+  @include responsive(medium) {
+    font-size: 0.9rem;
+  }
+  @include responsive(large) {
+    font-size: 0.95rem;
+  }
+
+  @include responsive(x-large) {
+    font-size: 1rem;
+  }
+}

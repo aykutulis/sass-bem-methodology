@@ -1,0 +1,136 @@
+.site-logo {
+  height: 3rem;
+  transition: 1.5s;
+
+  &:hover {
+    transform: rotate(2turn);
+  }
+}
+
+.header-title {
+  font-size: 2.5rem;
+  color: white;
+  animation: textFromLeft;
+  -webkit-animation: textFromLeft 1s;
+}
+
+.header-subtitle {
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  animation: textFromRight 1s;
+  -webkit-animation: textFromRight 1.4s;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: $main-color;
+  border-radius: 10000px;
+  -webkit-border-radius: 10000px;
+  -moz-border-radius: 10000px;
+  -ms-border-radius: 10000px;
+  -o-border-radius: 10000px;
+  padding: 0.25rem 1rem;
+  outline: none;
+  border: none;
+  animation: appear 1s ease-in-out;
+  -webkit-animation: appear 1s ease-in-out;
+
+  &:hover {
+    color: white;
+    background-color: $main-color-light;
+  }
+}
+
+.icon-down {
+  position: absolute;
+  width: 2.5rem;
+  bottom: 1rem;
+  animation: appear 1s alternate infinite;
+  -webkit-animation: appear2 0.7s alternate infinite;
+}
+
+.course-card {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  border: 1px solid $main-font-color;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &--java {
+    @extend .course-card;
+    background-image: linear-gradient(to right bottom, rgba(white, 0.5), rgba(white, 0.9)), url('../images/java.jpg');
+  }
+
+  &--js {
+    @extend .course-card;
+    background-image: linear-gradient(to right bottom, rgba(white, 0.5), rgba(white, 0.9)), url('../images/nodejs.jpg');
+  }
+
+  &--flutter {
+    @extend .course-card;
+    background-image: linear-gradient(to right bottom, rgba(white, 0.5), rgba(white, 0.9)), url('../images/flutter.jpg');
+  }
+}
+
+.form {
+  max-width: 900px;
+  margin: 0 auto;
+
+  &__label {
+    color: $main-font-color;
+    font-weight: 700;
+    display: block;
+  }
+
+  &__input {
+    width: 100%;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+    outline: none;
+    border: 1px solid $main-font-color;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    padding: 0.5rem;
+    color: inherit;
+    resize: vertical;
+    max-height: 150px;
+
+    &:hover,
+    &:focus {
+      border-color: $main-color;
+    }
+  }
+
+  &__btn-container {
+    text-align: right;
+  }
+
+  &__btn {
+    @extend .btn;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,104 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: $main-font-color;
+}
+
+.fullscreen-header {
+  height: 100vh;
+  @include flexCenter;
+  flex-direction: column;
+  background-image: linear-gradient(to right bottom, rgba($main-color-dark, 0.4), rgba($main-color, 0.4)), url(../images/header.jpg);
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.nav {
+  background-color: $main-font-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0.4rem;
+  text-align: center;
+
+  @include responsive(small) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 12%;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-item {
+      text-decoration: none;
+      color: white;
+      margin-left: 1rem;
+
+      &:hover {
+        color: $main-color-light;
+      }
+    }
+  }
+}
+
+.section {
+  margin: 1rem 0;
+  padding: 1rem;
+
+  &-title {
+    text-align: center;
+    margin: 1rem;
+  }
+
+  &--accent {
+    background-color: $main-color;
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(auto, 500px);
+  justify-content: center;
+  row-gap: 2rem;
+  padding: 0.5rem;
+
+  @include responsive(medium) {
+    grid-template-columns: repeat(2, minmax(auto, 500px));
+  }
+
+  &__item {
+    @include flexCenter;
+  }
+
+  &__img {
+    width: 20%;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-left: 0.5rem;
+  }
+}
+
+.course-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+  @include responsive(small) {
+    max-width: 75%;
+  }
+
+  @include responsive(large) {
+    flex-direction: row;
+    max-width: 75%;
+  }
+}
